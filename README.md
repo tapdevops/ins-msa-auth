@@ -1,1 +1,1 @@
-# ins-msa-auth
+<!-- include(./docs/source/index.md) -->
