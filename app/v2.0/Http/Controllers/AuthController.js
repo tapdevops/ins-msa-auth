@@ -307,11 +307,7 @@
 					} );
 				} )
 				.on( 'error', function ( err ) {
-					return res.send( {
-						status: false,
-						message: 'Error Login!',
-						data: {}
-					} );
+					console.log(err);
 				} );
 			}
 			else {
