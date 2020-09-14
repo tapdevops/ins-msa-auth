@@ -5,6 +5,9 @@
 */
 // Controllers
 const Controllers = {
+	v_2_2: {
+		SyncMobile: require(_directory_base + '/app/v2.1/Http/Controllers/SyncMobileController.js'),
+	},
 	v_2_1: {
 		Auth: require(_directory_base + '/app/v2.1/Http/Controllers/AuthController.js'),
 		SyncMobile: require(_directory_base + '/app/v2.1/Http/Controllers/SyncMobileController.js'),
@@ -112,6 +115,13 @@ module.exports = (app) => {
 		})
 	});
 
+	/*
+	 |--------------------------------------------------------------------------
+	 | API Versi 2.2
+	 |--------------------------------------------------------------------------
+	 */
+	//sync data block ke mobile dengan tambahan field topografi
+	app.get('/api/v2.2/mobile-sync/hectare-statement/block', Middleware.v_2_0.VerifyToken, Controllers.v_2_2.SyncMobile.hs_block_find);
 	/*
 	 |--------------------------------------------------------------------------
 	 | API Versi 2.1
