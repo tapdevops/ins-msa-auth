@@ -1780,7 +1780,7 @@
 						} );
 					}
 					if ( config.app.env == 'prod' ) {
-						var path_global = 'http://apis.tap-agri.com' + '/' + config.app.path.qa + '/';
+						var path_global = 'http://apis.tap-agri.com' + '/' + config.app.path.prod + '/';
 						// var path_global = req.protocol + '://' + req.get( 'host' ) + '/' + config.app.path.prod + '/';
 					}
 					else if ( config.app.env == 'qa' ) {
