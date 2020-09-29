@@ -19,7 +19,7 @@ RUN npm install
 COPY . /usr/src/app
 # ------------------------------------------------------------------
 # Setup port
-EXPOSE 5008
+EXPOSE 3008
 # ------------------------------------------------------------------
 # Running command
 CMD [ "node", "server.js" ]
