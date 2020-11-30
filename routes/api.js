@@ -146,6 +146,8 @@ module.exports = (app) => {
 	//tambah parameter maps lat long dan tambah field PARAMETER_FOR
 	app.get('/api/v2.1/parameter/track', Middleware.v_2_0.VerifyToken, Controllers.v_2_1.Parameter.time_track_find_one);
 	app.post('/api/v2.1/sync/tap/tm-holiday', Middleware.v_2_0.VerifyToken, Controllers.v_2_1.SyncTAP.syncHoliday);
+	//hit api sync finding v2.1 untuk trigger insert ke notif setiap kali sync
+	app.get('/api/v2.1/mobile-sync/finding', Middleware.v_2_0.VerifyToken, Controllers.v_2_1.SyncMobile.finding_find);
 
 
 	/*
